@@ -1,10 +1,10 @@
 class WeatherDataTemplate {
     name;
-    temperature;
-    iconSrc;
-    windSpeed;
-    windDirection;
-    cloudiness;
+    temp;
+    icon;
+    wind_speed;
+    wind_direction;
+    clouds;
     pressure;
     humidity;
     lat;

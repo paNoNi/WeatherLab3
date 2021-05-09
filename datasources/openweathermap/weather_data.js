@@ -6,12 +6,12 @@ class OpenWeatherMapWeatherData extends WeatherDataTemplate {
 
         let data = new WeatherDataTemplate();
         data.name = response.name;
-        data.temperature = Math.round(response.main.temp);
-        data.iconSrc = `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`;
-        data.windSpeed = response.wind.speed;
-        data.windDirection = WeatherDataTemplate.convertWindDirection(response.wind.deg);
+        data.temp = Math.round(response.main.temp);
+        data.icon = `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`;
+        data.wind_speed = response.wind.speed;
+        data.wind_direction = WeatherDataTemplate.convertWindDirection(response.wind.deg);
         // Set to Upper first character of 'cloudiness'
-        data.cloudiness = response.weather[0].description.charAt(0).toUpperCase()
+        data.clouds = response.weather[0].description.charAt(0).toUpperCase()
             + response.weather[0].description.slice(1);
         data.pressure = response.main.pressure;
         data.humidity = response.main.humidity;
