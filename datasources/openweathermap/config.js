@@ -1,10 +1,6 @@
-function getApiKeyFromEnv() {
-    const apiKey = '959ff036391e56de6e56139562a2cec7';
-    if (apiKey === undefined) {
-        throw new Error("OPENWEATHERMAP_KEY env variable is not set")
-    }
 
-    return apiKey;
+function getApiKeyFromEnv() {
+    return '959ff036391e56de6e56139562a2cec7';
 }
 
 module.exports = {
