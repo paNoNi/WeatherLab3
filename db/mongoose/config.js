@@ -1,6 +1,6 @@
 function getUrlFromEnv() {
-    const user = process.env.MONGODB_USER;
-    const password = process.env.MONGODB_PASSWORD;
+    const user = 'noni';
+    const password = 'qwertynoni';
     if (password === undefined) {
         throw new Error("MONGODB_PASSWORD env variable is not set");
     }
@@ -8,7 +8,7 @@ function getUrlFromEnv() {
         throw new Error("MONGODB_USER env variable is not set");
     }
 
-    return `mongodb+srv://${user}:${password}@cluster0.fycwi.mongodb.net/weatherDatabase?retryWrites=true&w=majority`;
+    return `mongodb+srv://${user}:${password}@cluster0.jcji8.mongodb.net/weatherdb?retryWrites=true&w=majority`;
 }
 
 module.exports = {
