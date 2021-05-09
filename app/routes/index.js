@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-const openWeatherMapRequests = require("../../datasources/openweathermap/requests");
+const openWeatherMapRequests = require("../../datasources/weatherapi/requests");
 
 module.exports = function (app, favouritesStorage) {
     app.get("/weather/city", asyncHandler(async (req, res) => {

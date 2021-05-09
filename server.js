@@ -1,9 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require('cors');
-const db = require("./db/mongoose/config");
+const db = require("./database/mongoose/config");
 const config = require("./config");
-const favoritesStorage = require("./db/favourites_storage");
+const favoritesStorage = require("./database/favourites_storage");
 
 const app = express();
 const port = config.port;
