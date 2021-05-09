@@ -7,8 +7,8 @@ class WeatherDataTemplate {
     cloudiness;
     pressure;
     humidity;
-    locationLat;
-    locationLon;
+    lat;
+    lon;
 
     static convertWindDirection(deg) {
         if (deg > 337.5) {

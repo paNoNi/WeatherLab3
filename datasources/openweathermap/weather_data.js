@@ -15,8 +15,8 @@ class OpenWeatherMapWeatherData extends WeatherDataTemplate {
             + response.weather[0].description.slice(1);
         data.pressure = response.main.pressure;
         data.humidity = response.main.humidity;
-        data.locationLat = response.coord.lat;
-        data.locationLon = response.coord.lon;
+        data.lat = response.coord.lat;
+        data.lon = response.coord.lon;
 
         return data;
     }
