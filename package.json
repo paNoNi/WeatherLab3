@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "web lab 3",
   "author": "Novgorodcev Nikita",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon server.js",
     "start": "node server"
   },
   "dependencies": {
