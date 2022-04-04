@@ -2,7 +2,7 @@ const asyncHandler = require("express-async-handler");
 const openWeatherMapRequests = require("../../datasources/weatherapi/requests");
 
 module.exports = function (app, favouritesStorage) {
-    app.get("/weather/city", asyncHandler(async (req, res) => {
+    app.get("/api/weather/city", asyncHandler(async (req, res) => {
         const cityName = req.query.q;
 
         const json = await openWeatherMapRequests.requestWeatherByName(cityName);
@@ -13,7 +13,7 @@ module.exports = function (app, favouritesStorage) {
         res.send(json);
     }));
 
-    app.get("/weather/coordinates", asyncHandler(async (req, res) => {
+    app.get("/api/weather/coordinates", asyncHandler(async (req, res) => {
         const lat = req.query.lat;
         const lon = req.query.long;
 
@@ -25,11 +25,11 @@ module.exports = function (app, favouritesStorage) {
         res.send(json);
     }));
 
-    app.get("/favourites", asyncHandler(async (req, res) => {
+    app.get("/api/favourites", asyncHandler(async (req, res) => {
         res.send({favouriteCitiesNames: await favouritesStorage.getAll()});
     }));
 
-    app.post("/favourites", asyncHandler(async (req, res) => {
+    app.post("/api/favourites", asyncHandler(async (req, res) => {
         const cityName = req.query.q;
 
         if (cityName === undefined) {
@@ -59,7 +59,7 @@ module.exports = function (app, favouritesStorage) {
         await favouritesStorage.addWithName(json.name);
     }));
 
-    app.delete("/favourites", asyncHandler(async (req, res) => {
+    app.delete("/api/favourites", asyncHandler(async (req, res) => {
         const cityName = req.query.q;
 
         if (cityName === undefined) {
