@@ -6,5 +6,5 @@ function getUrlFromEnv() {
 }
 
 module.exports = {
-    url: getUrlFromEnv()
+    url: process.env.DB_URL
 };
