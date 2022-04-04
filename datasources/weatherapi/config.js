@@ -5,5 +5,5 @@ function getApiKeyFromEnv() {
 
 module.exports = {
     url: "https://api.openweathermap.org/data/2.5/weather",
-    apiKey: getApiKeyFromEnv()
+    apiKey: process.env.API_KEY
 };
